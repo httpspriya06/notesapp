@@ -1,0 +1,82 @@
+.notescont {
+  width: 75vw;
+  height: 100vh;
+  background-color: var(--primary);
+  /* border: 2px solid red; */
+  /* display: none; */
+}
+.heading {
+  background-color: var(--white);
+  height: 15vh;
+  /* border: 2px solid red; */
+  z-index: 10;
+  padding: 1.5%;
+  display: flex;
+  gap: 1rem;
+}
+
+.textarea {
+  background-color: var(--white);
+  /* border: 2px solid red; */
+  z-index: 10;
+  height: 32vh;
+  margin: 52vh auto 0 auto;
+  padding: 1% 1% 1% 2%;
+  position: absolute;
+  bottom: 1vh;
+}
+#enternotes {
+  height: 28vh;
+  width: 72vw;
+  padding: 1%;
+  font-size: 1.2rem;
+  color: var(--grey);
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+#enter {
+  width: 2rem;
+  position: absolute;
+  right: 3vw;
+  bottom: 5vh;
+}
+.usernotes {
+  color: black;
+  font-weight: 500;
+  /* border: 2px solid green; */
+  height: 60vh;
+  padding: 1%;
+  background-color: var(--primary);
+}
+.note {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.notetext {
+  /* border: 2px solid yellow; */
+  margin: auto 50vw auto auto;
+  margin-top: 2rem;
+}
+.notetime {
+  /* border: 2px solid purple; */
+  width: 6rem;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+.groupLogo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 1%;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.groupInfo {
+  font-size: 1.8rem;
+  padding: 0.5%;
+}

@@ -1,0 +1,228 @@
+/* Desktop view */
+.left {
+  height: 100vh;
+  width: 25vw;
+  background-color: white;
+  padding: 1.5rem 0.5rem 0.5rem 2rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  padding: 1%;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: #000000;
+  color: #ffffff;
+  width: 18vw;
+  padding: 0rem 0rem 0.2rem 0rem;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  margin: 0 auto 0 2rem;
+}
+
+/* plus sign in create btn */
+#add {
+  font-size: 2.2rem;
+  position: relative;
+  top: 0.25rem;
+  right: 0.5rem;
+  padding: 2%;
+  margin-top: 4rem;
+}
+/* group  container */
+.group {
+  display: flex;
+  align-items: center;
+  margin: 2rem auto 0.5rem 2rem;
+
+  /* border: 2px solid red; */
+}
+
+/* image for group */
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem 0 0;
+  padding: 3.2%;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+li {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.selected {
+  background-color: var(--primary);
+  width: 25vw;
+  /* border: 2px solid red; */
+  height: 10vh;
+  padding: 4%;
+  border-radius: 30px;
+}
+/* end of slide bar */
+
+/* dialog box  */
+.box {
+  /* border: 1px black; */
+  background-color: #ffffff;
+  width: 40vw;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+
+  position: absolute;
+  height: 38vh;
+  z-index: 100;
+  left: 22vw;
+  bottom: 40vh;
+  padding: 2%;
+}
+/* text area div of dialog box */
+.dialog {
+  /* border: 2px solid red; */
+  height: 30vh;
+  line-height: 3.6rem;
+}
+label {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+input {
+  width: 20vw;
+  height: 6vh;
+  padding: 2%;
+  text-align: center;
+  border-radius: 30px;
+  border: 2px solid var(--grey);
+  margin-left: 2rem;
+}
+input::placeholder {
+  color: var(--grey);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* create btn in box */
+.btnn {
+  background-color: #000000;
+  color: #ffffff;
+  width: 8vw;
+  height: 5vh;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 28vw;
+  bottom: 2vh;
+  border-radius: 20px;
+}
+
+#cross {
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  position: absolute;
+  left: 37vw;
+  top: -1vh;
+  border-radius: 50%;
+}
+
+#cross:hover {
+  transform: scale(1.5);
+}
+
+/* Mobile view */
+@media screen and (max-width: 550px) {
+  .left {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    margin: 0;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .btn {
+    width: 80vw;
+    padding: 0.5%;
+    height: 6vh;
+    border-radius: 40px;
+    margin: 0 0 0 0;
+  }
+
+  #add {
+    font-size: 1.6rem;
+    position: relative;
+    top: 0.1rem;
+    right: 0.5rem;
+  }
+  /* dialog box styling */
+
+  .box {
+    /* border: 2px solid red; */
+    width: 90vw;
+    box-shadow: 1px 5px 100px rgba(0, 0, 0, 0.243);
+    position: absolute;
+    height: 30vh;
+    left: 5vw;
+    bottom: 40vh;
+    padding: 4%;
+    border-radius: 12px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  #heading {
+    font-size: 1rem;
+  }
+
+  /* text area div of dialog box */
+  .dialog {
+    /* border: 2px solid red; */
+    height: 27vh;
+    line-height: 1rem;
+  }
+  .lable {
+    margin-top: 1.2rem;
+  }
+  label {
+    font-size: 0.8rem;
+    /* border: 2px solid red; */
+  }
+
+  input {
+    width: 48vw;
+    height: 4vh;
+    padding: 0.2%;
+    margin-left: 1rem;
+  }
+  input::placeholder {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+
+  /* create btn in box */
+  .btnn {
+    width: 40vw;
+    height: 4vh;
+    position: absolute;
+    left: 25vw;
+    bottom: 2vh;
+  }
+
+  #cross {
+    position: absolute;
+    left: 80vw;
+    top: 2vh;
+  }
+}

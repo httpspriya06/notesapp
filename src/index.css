@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Roboto:wght@100&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 80%;
+  --primary: #f7ecdc;
+  --grey: #9a9a9a;
+  --purple: #b38bfa;
+  --pink: #ff79f2;
+  --blue: #43e6fc;
+  --orange: #f19576;
+  --darkblue: #0047ff;
+  --ocean: #6691ff;
+  --white: #e8e8e8;
+  font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 1px;
+}
+/* body {
+  background-color: var(--primary);
+} */
+
+/* styling of shared classes for colors part in dialog box */
+.color-selector {
+  margin-top: 1rem;
+  /* border: 2px solid green; */
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* border: 2px solid green; */
+  position: absolute;
+  bottom: 10vh;
+  left: 13vw;
+}
+
+.color-option {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-option.purple {
+  background-color: var(--purple);
+}
+
+.color-option.pink {
+  background-color: var(--pink);
+}
+
+.color-option.blue {
+  background-color: var(--blue);
+}
+.color-option.orange {
+  background-color: var(--orange);
+}
+.color-option.darkblue {
+  background-color: var(--darkblue);
+}
+.color-option.lightblue {
+  background-color: var(--ocean);
+}
+
+.color-option.selected {
+  border: 2px solid #000;
+}
+.color-option.selected:hover {
+  transform: scale(1.2);
+}
+/* end of shared classed of colors part */
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 100%;
+  }
+}

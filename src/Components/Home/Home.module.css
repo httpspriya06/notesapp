@@ -1,0 +1,55 @@
+/* Desktop view */
+
+.right {
+  /* border: 4px solid red; */
+  width: 75vw;
+  height: 100vh;
+  background-color: var(--primary);
+  /* display: none; */
+}
+
+/* Mobile view */
+
+@media screen and (max-width: 550px) {
+  .right {
+    display: none;
+  }
+}
+
+#notesimg {
+  width: 32rem;
+  /* border: 4px solid yellowgreen; */
+  position: relative;
+  left: 20vw;
+  top: 8vw;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.aboutnotesapp {
+  /* border: 4px solid red; */
+  margin: 6rem auto auto auto;
+  text-align: center;
+  padding: 2%;
+}
+.about {
+  font-size: 1.2rem;
+  padding: 1%;
+  font-weight: 500;
+}
+
+#footertext {
+  font-weight: 600;
+  /* border: 2px solid red; */
+  text-align: center;
+  padding: 0.4%;
+  margin: 20vh 0 0 0;
+}
+
+#lock {
+  width: 1rem;
+  padding: 0.2rem 0.2rem 0rem 0;
+  /* border: 2px solid red; */
+}
