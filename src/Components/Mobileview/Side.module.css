@@ -1,0 +1,157 @@
+/* Mobile view */
+@media screen and (max-width: 550px) {
+  .left {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    padding: 1.5rem 0.5rem 0.5rem 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1%;
+  }
+
+  .btn {
+    width: 80vw;
+    padding: 0.5%;
+    height: 6vh;
+    border-radius: 40px;
+    margin: 0 0 0 0;
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  #add {
+    font-size: 1.6rem;
+    position: relative;
+    top: 0.1rem;
+    right: 0.5rem;
+  }
+  .group {
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 0.5rem 2rem;
+
+    /* border: 2px solid red; */
+  }
+  /* dialog box styling */
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem 0 0;
+    padding: 4%;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  li {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  #heading {
+    font-size: 1rem;
+  }
+  .selected {
+    background-color: var(--primary);
+    border-radius: 30px;
+    width: 70vw;
+    height: 10vh;
+    padding: 5%;
+  }
+  /* dialog box  */
+  .box {
+    border: 2px solid red;
+    background-color: #ffffff;
+    width: 80vw;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    height: 30vh;
+    z-index: 100;
+    left: 8vw;
+    bottom: 40vh;
+    padding: 2%;
+  }
+  /* text area div of dialog box */
+  .dialog {
+    /* border: 2px solid red; */
+    height: 30vh;
+    line-height: 3.6rem;
+  }
+  label {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  input {
+    width: 20vw;
+    height: 6vh;
+    padding: 2%;
+    text-align: center;
+    border-radius: 30px;
+    border: 2px solid var(--grey);
+    margin-left: 2rem;
+  }
+
+  /* create btn in box */
+  .btnn {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    width: 40vw;
+    height: 4vh;
+    position: absolute;
+    left: 25vw;
+    bottom: 2vh;
+  }
+
+  #cross {
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+    position: absolute;
+    left: 70vw;
+    top: 1vh;
+    border-radius: 50%;
+  }
+
+  #cross:hover {
+    transform: scale(1.5);
+  }
+
+  /* text area div of dialog box */
+  .dialog {
+    /* border: 2px solid red; */
+    height: 27vh;
+    line-height: 1rem;
+  }
+  .lable {
+    margin-top: 1.2rem;
+  }
+  label {
+    font-size: 0.8rem;
+    /* border: 2px solid red; */
+  }
+
+  input {
+    width: 48vw;
+    height: 4vh;
+    padding: 0.2%;
+    margin-left: 1rem;
+  }
+  input::placeholder {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (min-width: 551px) {
+  .left {
+    display: none;
+  }
+}

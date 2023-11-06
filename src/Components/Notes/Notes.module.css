@@ -3,7 +3,6 @@
   height: 100vh;
   background-color: var(--primary);
   /* border: 2px solid red; */
-  /* display: none; */
 }
 .heading {
   background-color: var(--white);
@@ -80,3 +79,49 @@
   font-size: 1.8rem;
   padding: 0.5%;
 }
+
+/* mobile view */
+
+@media screen and (max-width: 550px) {
+  .notescont {
+    width: 100vw;
+  }
+  .heading {
+    padding: 2%;
+    padding-left: 3.2rem;
+  }
+  .groupLogo {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2%;
+  }
+  .groupInfo {
+    font-size: 1.8rem;
+    padding: 1%;
+  }
+  .textarea {
+    height: 30vh;
+    position: absolute;
+    bottom: 1vh;
+    width: 100vw;
+    padding: 3% 1% 3% 4%;
+  }
+  #enternotes {
+    width: 85vw;
+    padding: 3%;
+    height: 20vh;
+    font-size: 1.2rem;
+  }
+  #enter {
+    width: 1.5rem;
+    position: absolute;
+    right: 10vw;
+    top: 18vh;
+  }
+  .usernotes {
+    padding: 3%;
+  }
+}
+/*  */

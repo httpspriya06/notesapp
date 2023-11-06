@@ -6,7 +6,7 @@ function Notes({ showHome, selectedGroup }) {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState("");
 
-  // Load notes from local storage when the component mounts
+  // loead the local storage
   useEffect(() => {
     if (selectedGroup) {
       const storedNotes = localStorage.getItem(`notes_${selectedGroup.name}`);
@@ -16,9 +16,9 @@ function Notes({ showHome, selectedGroup }) {
     }
   }, [selectedGroup]);
 
-  // Update local storage whenever notes change
+  // Update local storage
   useEffect(() => {
-    if (selectedGroup) {
+    if (notes.length !== 0) {
       localStorage.setItem(
         `notes_${selectedGroup.name}`,
         JSON.stringify(notes)
@@ -26,17 +26,12 @@ function Notes({ showHome, selectedGroup }) {
     }
   }, [selectedGroup, notes]);
 
-  const addNote = () => {
-    if (noteText.trim() !== "") {
-      setNotes([...notes, { text: noteText, timestamp: new Date() }]);
-      setNoteText("");
-    }
-  };
-
-  const handleEnterKeyPress = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault(); // Prevent a newline in the textarea
-      addNote();
+  const addNote = (e) => {
+    if (e.key === "Enter") {
+      if (noteText.trim() !== "") {
+        setNotes([...notes, { text: noteText, timestamp: new Date() }]);
+        setNoteText("");
+      }
     }
   };
 
@@ -85,7 +80,7 @@ function Notes({ showHome, selectedGroup }) {
           placeholder="Enter your text here....."
           value={noteText}
           onChange={(e) => setNoteText(e.target.value)}
-          onKeyPress={handleEnterKeyPress}
+          onKeyDown={(e) => addNote(e)}
         ></textarea>
         <img
           id={styles.enter}

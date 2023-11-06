@@ -141,7 +141,7 @@ input::placeholder {
     width: 100vw;
     height: 100vh;
     background-color: white;
-    margin: 0;
+    display: none;
   }
 
   .heading {
@@ -224,5 +224,11 @@ input::placeholder {
     position: absolute;
     left: 80vw;
     top: 2vh;
+  }
+  .selected {
+    width: 70vw;
+    /* border: 2px solid red; */
+    height: 10vh;
+    padding: 5%;
   }
 }

@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 :root {
   font-size: 80%;
@@ -73,11 +75,27 @@
 .color-option.selected:hover {
   transform: scale(1.2);
 }
+
 /* end of shared classed of colors part */
 
 /* mobile view */
 @media screen and (max-width: 500px) {
   :root {
     font-size: 100%;
+  }
+}
+.back-arrow {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 30px;
+  cursor: pointer;
+  color: #000;
+  background-color: transparent;
+  z-index: 1;
+}
+@media screen and (min-width: 551px) {
+  .back-arrow {
+    display: none;
   }
 }

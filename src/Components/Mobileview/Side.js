@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import styles from "./Slide.module.css";
+import styles from "./Side.module.css";
 
-function Slidebar({ onGroupClick }) {
+function Side({ onGroupClick }) {
   const [isDialogOpen, setDialogOpen] = useState(false);
   const [groupName, setGroupName] = useState("");
   const [groupColor, setGroupColor] = useState("");
@@ -138,4 +138,4 @@ function Slidebar({ onGroupClick }) {
     </div>
   );
 }
-export default Slidebar;
+export default Side;
