@@ -6,30 +6,38 @@ function Notes({ showHome, selectedGroup }) {
   const [notes, setNotes] = useState([]);
   const [noteText, setNoteText] = useState("");
 
-  // loead the local storage
+  const generateUniqueId = () => {
+    // unique id to store data for diff group so that data dont get merge
+    return Date.now().toString();
+  };
+
   useEffect(() => {
     if (selectedGroup) {
-      const storedNotes = localStorage.getItem(`notes_${selectedGroup.name}`);
-      if (storedNotes) {
-        setNotes(JSON.parse(storedNotes));
-      }
+      const storedNotes = Object.keys(localStorage).filter((key) =>
+        key.startsWith(`notes_${selectedGroup.name}_`)
+      );
+
+      const parsedNotes = storedNotes.map((key) =>
+        JSON.parse(localStorage.getItem(key))
+      );
+
+      setNotes(parsedNotes);
     }
   }, [selectedGroup]);
-
-  // Update local storage
-  useEffect(() => {
-    if (notes.length !== 0) {
-      localStorage.setItem(
-        `notes_${selectedGroup.name}`,
-        JSON.stringify(notes)
-      );
-    }
-  }, [selectedGroup, notes]);
 
   const addNote = (e) => {
     if (e.key === "Enter") {
       if (noteText.trim() !== "") {
-        setNotes([...notes, { text: noteText, timestamp: new Date() }]);
+        const newNote = {
+          id: generateUniqueId(),
+          text: noteText,
+          timestamp: new Date(),
+        };
+
+        const newNoteKey = `notes_${selectedGroup.name}_${newNote.id}`;
+
+        localStorage.setItem(newNoteKey, JSON.stringify(newNote));
+        setNotes([...notes, newNote]);
         setNoteText("");
       }
     }
@@ -65,8 +73,8 @@ function Notes({ showHome, selectedGroup }) {
         )}
       </div>
       <div className={styles.usernotes}>
-        {notes.map((note, index) => (
-          <div key={index} className={styles.note}>
+        {notes.map((note) => (
+          <div key={note.id} className={styles.note}>
             <div className={styles.notetext}>{note.text}</div>
             <div className={styles.notetime}>
               {formatDate(new Date(note.timestamp))}

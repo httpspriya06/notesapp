@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: var(--primary);
   /* border: 2px solid red; */
+  overflow: hidden;
 }
 .heading {
   background-color: var(--white);
@@ -57,13 +58,14 @@
 }
 .notetext {
   /* border: 2px solid yellow; */
-  margin: auto 50vw auto auto;
+  margin: auto 40vw auto auto;
   margin-top: 2rem;
+  width: 4rem;
 }
 .notetime {
   /* border: 2px solid purple; */
   width: 6rem;
-  margin-top: 2rem;
+  margin: 3vh auto auto 6vw;
   font-size: 0.8rem;
 }
 .groupLogo {

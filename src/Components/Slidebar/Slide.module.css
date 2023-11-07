@@ -4,6 +4,8 @@
   width: 25vw;
   background-color: white;
   padding: 1.5rem 0.5rem 0.5rem 2rem;
+  /* border: 2px solid red; */
+  overflow: hidden;
 }
 
 .heading {

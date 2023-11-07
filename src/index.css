@@ -21,9 +21,9 @@
   font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 1px;
 }
-/* body {
+body {
   background-color: var(--primary);
-} */
+}
 
 /* styling of shared classes for colors part in dialog box */
 .color-selector {
