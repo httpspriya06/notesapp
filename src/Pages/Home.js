@@ -13,9 +13,11 @@ function Home() {
     setSelectedGroup({ name: groupName, color: groupColor });
     setShowNotes(true);
   };
+
   // back button in mobile view
   const handleBackToSlidebar = () => {
     setShowNotes(false);
+    setSelectedGroup({ name: "", color: "" }); // Reset the selected group
   };
 
   return (
@@ -33,7 +35,7 @@ function Home() {
           <span>&#8592;</span>
         </div>
       )}
-      <Side onGroupClick={handleGroupClick} />
+      {showNotes ? null : <Side onGroupClick={handleGroupClick} />}
     </div>
   );
 }

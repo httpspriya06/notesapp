@@ -16,7 +16,7 @@
   .btn {
     width: 80vw;
     padding: 0.5%;
-    height: 6vh;
+    height: 14vw;
     border-radius: 40px;
     margin: 0 0 0 0;
     background-color: #000000;
@@ -71,10 +71,10 @@
     width: 80vw;
     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
     position: absolute;
-    height: 30vh;
+    height: 60vw;
     z-index: 100;
     left: 8vw;
-    bottom: 40vh;
+    margin-top: 2rem;
     padding: 2.5%;
   }
   /* text area div of dialog box */
@@ -105,7 +105,7 @@
     font-size: 1.2rem;
     border-radius: 20px;
     width: 40vw;
-    height: 4vh;
+    height: 10vw;
     position: absolute;
     left: 25vw;
     bottom: 2vh;

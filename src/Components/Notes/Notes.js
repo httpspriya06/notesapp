@@ -25,8 +25,8 @@ function Notes({ showHome, selectedGroup }) {
     }
   }, [selectedGroup]);
 
-  const addNote = (e) => {
-    if (e.key === "Enter") {
+  const addNote = (e, click) => {
+    if (e.key === "Enter" || e.type === "click") {
       if (noteText.trim() !== "") {
         const newNote = {
           id: generateUniqueId(),
@@ -94,7 +94,7 @@ function Notes({ showHome, selectedGroup }) {
           id={styles.enter}
           src="./assests/enter.png"
           alt=""
-          onClick={addNote}
+          onClick={(e) => addNote(e)}
         />
       </footer>
     </div>
